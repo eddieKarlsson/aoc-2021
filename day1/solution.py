@@ -1,7 +1,3 @@
-with open('input.txt') as f:
-    input_list = [line.rstrip() for line in f]
-
-
 def larger_than_previous_measurement(input_file):
     count = 0
     previous = None
