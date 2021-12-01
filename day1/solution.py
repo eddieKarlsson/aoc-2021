@@ -14,5 +14,21 @@ def larger_than_previous_measurement(input_file):
     return count
 
 
+def sum3_larger_than_previous_measurement(input_file):
+    with open(input_file) as f:
+        input_list = [int(line.rstrip()) for line in f]
+
+    for i, item in enumerate(input_list):
+        # Create list of three summed values
+        print(type(i), i)
+        print(type(item))
+        print(type(input_list))
+
+        if i < len(input_list) - 1:
+            print(input_list[i + 1])
+        #  sum = i + input_list[i + 1] + input_list[i + 2]
+
+
 if __name__ == '__main__':
-    print(larger_than_previous_measurement('input.txt'))
+    #  print(larger_than_previous_measurement('input.txt'))
+    print(sum3_larger_than_previous_measurement('input_test.txt'))
